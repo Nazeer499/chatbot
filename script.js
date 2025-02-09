@@ -1,6 +1,6 @@
 // Predefined questions and answers
 const qaPairs = [
-    { question: "What is your name?", answer: "I am a simple chatbot." },
+    { question: "What is your name?", answer: "my name is Nazeer how i can help you." },
     { question: "How are you?", answer: "I'm just a program, so I don't have feelings!" },
     { question: "What can you do?", answer: "I can answer predefined questions." },
     { question: "Who created you?", answer: "You did!" },
