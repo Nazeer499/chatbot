@@ -23,9 +23,9 @@ body {
     text-align: center;
 }
 .profile-image {
-    width: 200px; /* Adjust the size as needed */
+    width: 400px; /* Adjust the size as needed */
     height: auto;
-    border-radius: 50%; /* Makes the image circular */
+    border-radius: 75%; /* Makes the image circular */
 }
 
 .chat-box {
