@@ -1,33 +1,47 @@
+/* General body styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-}
-.chat-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px; /* Space between the image and chat container */
+    box-sizing: border-box;
 }
 
+/* Chat wrapper for responsive layout */
+.chat-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically by default */
+    align-items: center;
+    gap: 20px; /* Space between the image and chat container */
+    max-width: 600px; /* Limit the maximum width */
+    width: 90%; /* Make it responsive */
+}
+
+/* Responsive profile image */
+.profile-image {
+    width: 100%; /* Take full width of its container */
+    max-width: 150px; /* Limit the maximum size */
+    height: auto;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Ensure the image doesn't stretch */
+}
+
+/* Chat container styling */
 .chat-container {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px; /* Adjust the width as needed */
+    width: 100%; /* Take full width of its container */
     text-align: center;
-}
-.profile-image {
-    width: 400px; /* Adjust the size as needed */
-    height: auto;
-    border-radius: 75%; /* Makes the image circular */
+    box-sizing: border-box;
 }
 
+/* Chat box styling */
 .chat-box {
     height: 300px;
     overflow-y: auto;
@@ -35,16 +49,20 @@ body {
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
+/* Input field styling */
 #user-input {
-    width: 70%;
+    width: calc(100% - 120px); /* Adjust based on button width */
     padding: 10px;
     margin-right: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
+/* Button styling */
 button {
     padding: 10px 20px;
     background-color: #007BFF;
@@ -52,8 +70,30 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 button:hover {
     background-color: #0056b3;
+}
+
+button:focus {
+    outline: 2px solid #0056b3;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+    /* For tablets and larger screens */
+    .chat-wrapper {
+        flex-direction: row; /* Place image and chat container side by side */
+        align-items: flex-start;
+    }
+
+    .profile-image {
+        max-width: 200px; /* Increase image size for larger screens */
+    }
+
+    .chat-container {
+        max-width: 400px; /* Limit chat container width */
+    }
 }
