@@ -7,14 +7,25 @@ body {
     height: 100vh;
     margin: 0;
 }
+.chat-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; /* Space between the image and chat container */
+}
 
 .chat-container {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 400px;
+    width: 300px; /* Adjust the width as needed */
     text-align: center;
+}
+.profile-image {
+    width: 100px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 50%; /* Makes the image circular */
 }
 
 .chat-box {
