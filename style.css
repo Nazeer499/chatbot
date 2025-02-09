@@ -23,7 +23,7 @@ body {
     text-align: center;
 }
 .profile-image {
-    width: 100px; /* Adjust the size as needed */
+    width: 200px; /* Adjust the size as needed */
     height: auto;
     border-radius: 50%; /* Makes the image circular */
 }
